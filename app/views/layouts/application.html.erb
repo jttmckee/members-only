@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnly</title>
+    <title> <%= yield(:title) %> | Members Only</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+    <%= render 'shared/messages' %>
     <%= yield %>
+    <br><%= debug(params) if Rails.env.development? %>
+    <br><%= session.to_hash.inspect if Rails.env.development?  %>
+
   </body>
 </html>

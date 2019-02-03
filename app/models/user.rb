@@ -10,4 +10,22 @@ class User < ApplicationRecord
   #bcrypt
   has_secure_password
 
+
+
+  def remember_me
+    token = SecureRandom.urlsafe_base64
+    self.remember_digest = User.digest(token)
+    save
+    return token
+  end
+
+  def forget_me
+    self.remember_digest = nil
+    save
+  end
+
+  #class methods
+  def User.digest(token)
+    BCrypt::Password.create(token, cost:10)
+  end
 end

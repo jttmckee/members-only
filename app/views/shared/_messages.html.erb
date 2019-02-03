@@ -1,0 +1,7 @@
+<% unless flash.empty? %>
+<ul>
+  <% flash.each do |status, message| %>
+    <li> <%= message %> </li>
+  <% end %>
+</ul>
+<% end %>

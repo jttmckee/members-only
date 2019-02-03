@@ -1,0 +1,9 @@
+<h1>Welcome to the Members Only App</h1>
+<% if logged_in?(@user) %>
+<p>Welcome <%= @user.name %></p>
+<% else %>
+<%= link_to 'Login to see more!',login_path  %>
+<% end %>
+
+<br>
+user: <%= @user&.inspect %>
