@@ -1,0 +1,10 @@
+
+<div class="post_box">
+<br>
+<strong>Title: </strong><i><%= post.title %></i>
+<% if logged_in? current_user %>
+ | <strong>Author: </strong><i><%= post.author.name %></i> <br>
+ <% end %>
+
+ <p><%= post.body %></p>
+</div>

@@ -1,0 +1,16 @@
+<% provide(:title, 'New Post') %>
+<h1>New Post</h1>
+
+<div class="form-container">
+
+<p>
+  <%= render partial: 'shared/errors', locals: {object: @post }%>
+  <%= form_for(@post) do |f| %>
+    <%= f.label :title, 'Title:'  %>
+    <%= f.text_field :title, placeholder: 'Title of your post' %> <br>
+    <%= f.label :body, 'Body - only text please:' %> <br>
+    <%= f.text_area :body, rows: '15', cols:'75' %> <br>
+    <%= f.submit 'Create Post' %>
+  <% end %>
+</p>
+</div>

@@ -1,3 +1,5 @@
+<% provide(:title, 'Home') %>
+
 <h1>Welcome to the Members Only App</h1>
 <% if logged_in?(@user) %>
 <p>Welcome <%= @user.name %></p>
@@ -6,4 +8,3 @@
 <% end %>
 
 <br>
-user: <%= @user&.inspect %>

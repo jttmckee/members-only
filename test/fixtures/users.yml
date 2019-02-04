@@ -3,20 +3,14 @@
 jason:
   name: Jason
   email: jason@test.com
-  member: true
-  admin: true
   password_digest: <%= User.digest('password') %>
 
 hodja:
   name: Hodja
   email: hodja@example.org
-  member: true
-  admin: false
   password_digest: <%= User.digest('password') %>
 
 theo:
   name: Theo
   email: theo@example.co.uk
-  member: false
-  admin: false
   password_digest: <%= User.digest('password') %>

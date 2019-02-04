@@ -1,5 +1,8 @@
 <% provide(:title, 'Log in') %>
 
+<div class="form-container">
+
+
 <%= form_for(:user, url: login_path, method: 'post') do |f| %>
 <%= f.label :email, "Email:" %>
 <%= f.email_field :email %> <br>
@@ -10,3 +13,4 @@
 <%= f.submit 'Log in' %>
 
 <% end %>
+</div>

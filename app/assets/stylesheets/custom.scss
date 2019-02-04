@@ -4,4 +4,19 @@
 ul.navbar {
   list-style: none;
   padding-top: 15px;
+  li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.post_box {
+  border: 2px dotted grey;
+}
+.form-container {
+  padding: 10px
+}
+
+.posts-container {
+  padding:10px
 }

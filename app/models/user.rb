@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+  has_many :posts, foreign_key: 'author_id'
   #Validations
   validates :name, length: {maximum: 50}, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

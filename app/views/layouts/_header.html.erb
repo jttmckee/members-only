@@ -12,6 +12,10 @@
     <div class="collapse navbar-collapse" id='myNavbar'>
       <ul class='navbar navbar-nav'>
         <li><%= link_to 'Home', root_url %></li>
+        <li><%= link_to 'Posts', posts_path %></li>
+        <% if logged_in?(current_user) %>
+        <li><%= link_to 'New Post', new_post_path %></li>
+        <% end %>
       </ul>
       <ul class = 'nav navbar-nav navbar-right'>
         <% if logged_in?(current_user) %>
